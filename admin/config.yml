@@ -1,23 +1,17 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: master
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 collections:
-  - name: "pages"
+  - name: "paginas"
     label: "Páginas"
     files:
       - label: "Inicio"
-        name: "index"
+        name: "inicio"
         file: "index.md"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Contenido", name: "body", widget: "markdown" }
-      - label: "Biografía"
-        name: "bio"
-        file: "pages/bio.md"
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Contenido", name: "body", widget: "markdown" }
