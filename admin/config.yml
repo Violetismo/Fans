@@ -6,63 +6,18 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "paginas"
+  - name: "pages"
     label: "Páginas"
     files:
-      - file: "index.md"
-        label: "Inicio"
-        name: "inicio"
+      - label: "Inicio"
+        name: "index"
+        file: "index.md"
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Contenido", name: "body", widget: "markdown" }
-
-      - file: "about.md"
-        label: "Biografía"
+      - label: "Biografía"
         name: "bio"
+        file: "pages/bio.md"
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Contenido", name: "body", widget: "markdown" }
-
-  - name: "noticias"
-    label: "Noticias"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime" }
-      - { label: "Contenido", name: "body", widget: "markdown" }
-
-  - name: "giras"
-    label: "Giras"
-    folder: "_giras"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Ciudad", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime" }
-      - { label: "Lugar", name: "lugar", widget: "string" }
-      - { label: "Entradas", name: "entradas", widget: "string", required: false }
-      - { label: "Descripción", name: "body", widget: "markdown" }
-
-  - name: "discografia"
-    label: "Discografía"
-    folder: "_discografia"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título de la canción", name: "title", widget: "string" }
-      - { label: "Fecha de publicación", name: "date", widget: "datetime" }
-      - { label: "Letra", name: "body", widget: "markdown" }
-      - { label: "Enlace a Spotify", name: "spotify", widget: "string", required: false }
-      - { label: "Enlace a YouTube", name: "youtube", widget: "string", required: false }
-
-  - name: "galeria"
-    label: "Galería"
-    folder: "_galeria"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Imagen", name: "image", widget: "image" }
-      - { label: "Descripción", name: "body", widget: "markdown", required: false }
