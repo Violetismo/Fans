@@ -1,13 +1,6 @@
-title: "Violetismo"
-baseurl: ""
+title: Violetismo
+description: Sitio de fans de Violeta Hódar
+baseurl: "" # lo dejamos vacío para Netlify
 url: "https://violetismo.netlify.app"
-collections:
-  pages:
-    output: true
-    permalink: /:name/
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: default
+markdown: kramdown
+theme: minima
